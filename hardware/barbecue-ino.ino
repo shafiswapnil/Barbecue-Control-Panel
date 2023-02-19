@@ -1,6 +1,7 @@
 #include <ESP8266WiFi.h>
 #include <ArduinoJson.h>
 
+// wifi credentials and host address
 const char *ssid = "";
 const char *password = "";
 const char *host = ""; // trion.000webhostapp.com
