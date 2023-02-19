@@ -1,0 +1,18 @@
+/*.jumbotron{
+	margin-bottom: 0;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-shadow: 3px 3px 0 rgba(0,0,0,.2);
+}*/
+
+/*nav{ background-color: #e3f2fd; }*/
+
+.page-header{
+	padding-bottom: 9px;
+	margin: 40px 0 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.page-header h2{ font-weight: 380; cursor: default; }
+.page-header p{ cursor: default; }
