@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="ROBOTS" content="NOINDEX,NOFOLLOW,NOARCHIVE">
+		<meta name="Description" content="A Control Panel for online controlled Barbecue Machine">
+		<title>Barbecue Control Panel</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body data-spy="scroll" data-target="#main-nav">
+		<nav class="navbar navbar-dark sticky-top bg-success" id="main-nav">
+			<div class="container">
+				<a href="index.html" class="navbar-brand">Barbecue Control Panel</a>
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#desc" aria-controls="desc" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse" id="desc">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><a href="#lr" class="nav-link">Left-Right Motor Controls</a></li>
+						<li class="nav-item"><a href="#spray" class="nav-link">Spray</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<form action="inc/action.php" method="POST" class="needs-validation" novalidate role="form">
+				<section>
+					<div class="page-header">
+						<h2 id="lr">Left-Right Motor Controls</h2>
+						<p class="text-muted">Hold down <span class="badge badge-secondary">LEFT</span> &amp; <span class="badge badge-secondary">RIGHT</span> buttons to record time in Milliseconds</p>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="input-group input-group-lg mb-3">
+								<div class="input-group-prepend">
+									<button class="btn btn-success" id="left" type="button">LEFT</button>
+								</div>
+								<input type="number" class="form-control" placeholder="Hold down LEFT" min="0" aria-describedby="left" name="left" required>
+								<div class="input-group-append">
+									<span class="input-group-text" id="left" data-toggle="tooltip" title="Milliseconds">ms</span>
+								</div>
+								<div class="invalid-tooltip">Please enter a value.</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="input-group input-group-lg">
+								<div class="input-group-prepend">
+									<button class="btn btn-success" id="right" type="button">RIGHT</button>
+								</div>
+								<input type="number" class="form-control" placeholder="Hold down RIGHT" min="0" aria-describedby="right" name="right" required>
+								<div class="input-group-append">
+									<span class="input-group-text" id="right" data-toggle="tooltip" title="Milliseconds">ms</span>
+								</div>
+								<div class="invalid-tooltip">Please enter a value.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="spray">
+					<div class="page-header">
+						<h2>Spray Control</h2>
+						<p class="text-muted">Turn on/off spray switches</p>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="form-control">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" name="spray1" class="custom-control-input" id="spray1" onChange="handleChange(this);">
+										<label class="custom-control-label" for="spray1">Spray 1</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<div class="form-control">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" name="spray2" class="custom-control-input" id="spray2" onChange="handleChange(this);">
+										<label class="custom-control-label" for="spray2">Spray 2</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group mb-5">
+								<div class="form-control">
+									<div class="custom-control custom-switch">
+										<input type="checkbox" name="spray3" class="custom-control-input" id="spray3" onChange="handleChange(this);">
+										<label class="custom-control-label" for="spray3">Spray 3</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="text-center">
+					<div class="btn-group">
+						<input type="submit" class="btn btn-outline-success btn-lg mb-3" value="START" data-toggle="tooltip" data-placement="top" title="Send the request" id="submit">
+						<input type="reset" class="btn btn-outline-danger btn-lg mb-3" value="RESET" data-toggle="tooltip" data-placement="top" onclick="res();" title="Reset everything">
+					</div>
+				</div>
+			</form>
+		</div> <!-- end container/controls -->
+
+		<footer>
+			<div class="container text-center">
+				<hr>
+				<p>An online control for Barbecue Chiller Machine &copy; 2019</p>
+			</div>
+		</footer>
+
+		<script src="js/jquery-3.3.1.slim.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>
